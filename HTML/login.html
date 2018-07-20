@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="../CSS/login.css">
+    <script type="text/javascript" src="../JS/jquery.js"></script>
+    <script type="text/javascript">
+        //验证用户名
+        function check_userName() {
+            var userName = document.getElementById("name").value;
+            var regName = /[a-zA-Z]\w{4,16}/
+            if (userName == "" || userName.trim() == "") {
+                document.getElementById("err_name").innerHTML = "请输入用户名";
+                return false;
+            } else if (!regName.test(userName)) {
+                document.getElementById("err_name").innerHTML = "由英文字母和数字组成的4-16位字符，以字母开头";
+                return false;
+            } else {
+                document.getElementById("err_name").innerHTML = "ok!!!";
+                return true;
+            }
+        }
+        //验证昵称
+        function check_nickName() {
+            var nickName = document.getElementById("nick").value;
+            var regName = /[\u4e00-\u9fa5]{2,6}/
+            if (nickName == "" || nickName.trim() == "") {
+                document.getElementById("err_nick").innerHTML = "请输入昵称";
+                return false;
+            } else if (!regName.test(nickName)) {
+                document.getElementById("err_nick").innerHTML = "由2-6个汉字组成";
+                return false;
+            } else {
+                document.getElementById("err_nick").innerHTML = "ok!!!";
+                return true;
+            }
+        }
+        //验证邮箱
+        function check_email() {
+            var email = document.getElementById("email").value;
+            var regEmail = /^\w+@\w+((\.\w+)+)$/;
+            if (email == "" || email.trim() == "") {
+                document.getElementById("err_email").innerHTML = "请输入邮箱";
+                return false;
+            } else if (!regEmail.test(email)) {
+                document.getElementById("err_email").innerHTML = "邮箱账号@域名。如good@tom.com、whj@sina.com.cn";
+                return false;
+            } else {
+                document.getElementById("err_email").innerHTML = "ok!!!";
+                return true;
+            }
+        }
+        //验证密码
+        function check_pwd() {
+            var pwd = document.getElementById("pwd").value;
+            var regPwd = /^\w{4,10}$/;
+            if (pwd == "" || pwd.trim() == "") {
+                document.getElementById("err_pwd").innerHTML = "请输入密码";
+                return false;
+            } else if (!regPwd.test(pwd)) {
+                document.getElementById("err_pwd").innerHTML = "格式错误";
+                return false;
+            } else {
+                document.getElementById("err_pwd").innerHTML = "ok!!!";
+                return true;
+            }
+        }
+        //确认密码
+        function check_pwd2() {
+            var pwd = document.getElementById("pwd").value;
+            var pwd2 = document.getElementById("pwd2").value;
+            if (pwd2 == "" || pwd2.trim() == "") {
+                document.getElementById("err_pwd2").innerHTML = "请输入密码";
+                return false;
+            } else if (!pwd2.equals(pwd)) {
+                document.getElementById("err_pwd2").innerHTML = "两次输入密码不一致";
+                return false;
+            } else {
+                document.getElementById("err_pwd2").innerHTML = "ok!!!";
+                return true;
+            }
+        }
+        //验证手机号
+        function check_phone() {
+            var phone = document.getElementById("phone").value;
+            var regPhone = /[13,15,18]\d{9}/;
+            if (phone == "" || phone.trim() == "") {
+                document.getElementById("err_phone").innerHTML = "请输入手机号";
+                return false;
+            } else if (!regPhone.test(phone)) {
+                document.getElementById("err_phone").innerHTML = "手机号由11位数字组成，且以13,15,18开头";
+                return false;
+            } else {
+                document.getElementById("err_phone").innerHTML = "ok!!!";
+                return true;
+            }
+        }
+        //验证时间
+        function check_date() {
+            var birthday = document.getElementById("birthday").value;
+            var regDate = /[13,15,18]\d{9}/;
+            if (birthday == "" || birthday.trim() == "") {
+                document.getElementById("err_date").innerHTML = "请输入日期";
+                return false;
+            } else if (!regDate.test(birthday)) {
+                document.getElementById("err_date").innerHTML = "出生日期格式为yyyy-mm-dd";
+                return false;
+            } else {
+                document.getElementById("err_date").innerHTML = "ok!!!";
+                return true;
+            }
+        }
+    </script>
+    <script>
+        $(function () {
+            var errMsg;
+            $.each($("input"), function (i, val) {
+                $(val).blur(function () {
+                    if ($(val).attr("name") == "userName") {
+                        $(".nameMsg").remove();
+                        var userName = val.value;
+                        var regName = /[a-zA-Z]\w{4,16}/
+                        if (userName == "" || userName.trim() == "") {
+                            errMsg = "<span class='nameMsg' style='color:red;'>用户名不能为空</span>";
+                        } else if (!regName.test(userName)) {
+                            errMsg = "<span class='nameMsg' style='color:red;'>由英文字母和数字组成的4-16位字符，以字母开头</span>";
+                        } else {
+                            errMsg = "<span class='nameMsg' style='color:red;'>OK！</span>";
+                        }
+                        $(this).parent().append(errMsg);
+                    } else if ($(val).attr("name") == "nickName") {
+                        $(".nickMsg").remove();
+                        var nickName = val.value;
+                        var regName = /[\u4e00-\u9fa5]{2,6}/
+                        if (nickName == "" || nickName.trim() == "") {
+                            errMsg = "<span class='nickMsg' style='color:red;'>昵称不能为空</span>";
+                        } else if (!regName.test(nickName)) {
+                            errMsg = "<span class='nickMsg' style='color:red;'>由2-6个汉字组成</span>";
+                        } else {
+                            errMsg = "<span class='nickMsg' style='color:red;'>OK！</span>";
+                        }
+                        $(this).parent().append(errMsg);
+                    } else if ($(val).attr("name") == "email") {
+                        $(".emailMsg").remove();
+                        var email = val.value;
+                        var regEmail = /^\w+@\w+((\.\w+)+)$/;
+                        if (email == "" || email.trim() == "") {
+                            errMsg = "<span class='emailMsg' style='color:red;'>邮箱不能为空</span>";
+                        } else if (!regEmail.test(email)) {
+                            errMsg = "<span class='emailMsg' style='color:red;'>邮箱账号@域名。如good@tom.com、whj@sina.com.cn</span>";
+                        } else {
+                            errMsg = "<span class='emailMsg' style='color:red;'>OK！</span>";
+                        }
+                        $(this).parent().append(errMsg);
+                    } else if ($(val).attr("name") == "pwd") {
+                        $(".pwdMsg").remove();
+                        var pwd = val.value;
+                        var regPwd = /^\w{4,10}$/;
+                        if (pwd == "" || pwd.trim() == "") {
+                            errMsg = "<span class='pwdMsg' style='color:red;'>密码不能为空</span>";
+                        } else if (!regPwd.test(pwd)) {
+                            errMsg = "<span class='pwdMsg' style='color:red;'>格式错误</span>";
+                        } else {
+                            errMsg = "<span class='pwdMsg' style='color:red;'>OK！</span>";
+                        }
+                        $(this).parent().append(errMsg);
+                    } else if ($(val).attr("name") == "pwd2") {
+                        $(".pwd2Msg").remove();
+                        var pwd2 = val.value;
+                        var pwd = $("input")[3].value;
+                        if (pwd2 == "" || pwd2.trim() == "" || !pwd2.equals(pwd)) {
+                            errMsg = "<span class='pwd2Msg' style='color:red;'>两次输入密码不一致</span>";
+                        } else {
+                            errMsg = "<span class='pwd2Msg' style='color:red;'>OK！</span>";
+                        }
+                        $(this).parent().append(errMsg);
+                    } else if ($(val).attr("name") == "phone") {
+                        $(".phoneMsg").remove();
+                        var phone = val.value;
+                        var regPhone = /[13,15,18]\d{9}/;
+                        if (phone == "" || phone.trim() == "") {
+                            errMsg = "<span class = 'phoneMsg' style = 'color:red;' > 手机号不能为空 </span>"
+                        } else if (!regPhone.test(phone)) {
+                            errMsg = "<span class = 'phoneMsg' style = 'color:red;' > 格式错误 </span>"
+                        } else {
+                            errMsg = "<span class = 'phoneMsg' style = 'color:red;' > OK！ </span>"
+                        }
+                        $(this).parent().append(errMsg);
+                    } else if ($(val).attr("name") == "date") {
+                        $(".dateMsg").remove();
+                        var birthday = val.value;
+                        var regDate = /(190\d|201\d)[-/](0\d|1[0-2])[-/](0\d|[1-2]\d|30|31)/;
+                        if (birthday == "" || birthday.trim() == "") {
+                            errMsg = "<span class='dateMsg' style='color:red;'>请输入生日</span>";
+                        } else if (!regDate.test(birthday)) {
+                            errMsg = "<span class='dateMsg' style='color:red;'>格式错误</span>";
+                        } else {
+                            errMsg = "<span class='dateMsg' style='color:red;'>OK！</span>";
+                        }
+                        $(this).parent().append(errMsg);
+                    }
+                });
+            });
+        });
+    </script>
+    <title>jetBlue注册</title>
+</head>
+<body>
+<div id="table">
+<legend>请填写注册信息</legend>
+<form action="index.html" method="post">
+    <table>
+        <tr>
+            <td>用户名：</td>
+            <td><input type="text" name="userName" placeholder="由英文字母和数字组成的4-16位字符，以字母开头">
+            </td>
+        </tr>
+        <tr>
+            <td>昵称：</td>
+            <td><input type="text" name="nickName" placeholder="由2-6个汉字组成">
+            </td>
+        </tr>
+        <tr>
+            <td>邮箱：</td>
+            <td><input type="text" name="email" placeholder="邮箱账号@域名。如good@tom.com、whj@sina.com.cn">
+            </td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td><input type="password" name="pwd" placeholder="由英文字母和数字组成的4-10位字符">
+            </td>
+        </tr>
+        <tr>
+            <td>确认密码：</td>
+            <td><input type="password" name="pwd2" placeholder="确认密码">
+            </td>
+        </tr>
+        <tr>
+            <td>手机号码：</td>
+            <td><input type="text" name="phone" placeholder="手机号由11位数字组成，且以13,15,18开头">
+            </td>
+        </tr>
+        <tr>
+            <td>出生日期：</td>
+            <td><input type="text" name="date" placeholder="出生日期格式为yyyy-mm-dd">
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" name="submit" value="提交"></td>
+        </tr>
+    </table>
+</form>
+</fieldset>
+</div>
+</body>
+</html>

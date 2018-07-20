@@ -1,0 +1,76 @@
+#nav a:link {
+    text-decoration: none;
+    color: black;
+}
+
+#nav a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#nav a:hover {
+    text-decoration: none;
+    color: #0688ff;
+}
+
+#nav {
+    background-image: url("../img/banner/banner.jpg");
+    background-position: center;
+    /*background-repeat: no-repeat;*/
+    background-size: 100%;
+    width: 100%;
+    height: 165px;
+
+}
+
+#navleft {
+    width: 70%;
+    height: 50px;
+    text-align: center;
+}
+
+#navleft li {
+    line-height: 50px;
+    text-align: center;
+    margin-left: 5px;
+    float: left;
+    padding: 5px;
+
+}
+
+#navleft ul li {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+#navleft img {
+    width: 130px;
+    height: 40px;
+}
+
+#navleft img:hover {
+    opacity: 0.6;
+}
+
+#navRight {
+    width: 30%;
+    height: 50px;
+    float: right;
+    text-align: right;
+    margin-top: 20px;
+}
+#navRight img{
+    position: absolute;
+    right: 0px;
+    top: 3px;
+}
+#userclick{
+    position: absolute;
+    top: 70px;
+    right: 55px;
+}
+.firstNav{
+    background-color: rgba(138, 169, 189, 0.44);
+    font-family: "微软雅黑";
+    font-weight: bold ;
+}

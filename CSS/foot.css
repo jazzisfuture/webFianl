@@ -1,0 +1,69 @@
+@charset "UTF-8";
+#foot{
+    width: 100%;
+    height: 200px;
+    padding-top: 10px;
+}
+#map{
+    text-align: center;
+    background-color: rgba(94, 123, 141, 0.65);
+    height: 180px;
+    padding-top: 20px;
+}
+#map a:link{
+    text-decoration: none;
+    color: white;
+}
+#map a:visited{
+    text-decoration: none;
+    color: white;
+}
+#map a:hover{
+    text-decoration: none;
+    color: rgba(255, 253, 87, 0.78);
+}
+#map img:hover{
+    opacity: 0.7;
+}
+#map>div{
+    float: left;
+}
+.mapList{
+    margin-left: 100px;
+}
+.mapList li{
+    padding: 5px;
+}
+#aircraft{
+    margin-left: 350px;
+}
+.title{
+    font-weight: bold;
+}
+
+#cont li{
+    float: left;
+    margin-left: 30px;
+
+}
+#cont a:link{
+    text-decoration: none;
+    color: #000;
+}
+#cont a:link{
+    text-decoration: none;
+    color: #000;
+}
+#cont a:hover{
+    text-decoration: none;
+    color: #0688ff;
+}
+#copyright{
+    float: left;
+    margin-left: 600px;
+}
+
+#copyright span{
+    font-weight: bold;
+
+}

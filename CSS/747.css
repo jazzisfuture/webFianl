@@ -1,0 +1,86 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.topPic{
+    width: 100%;
+    text-align: center;
+    margin-bottom: -57px;
+}
+.topPic img{
+    width: 100%;
+}
+.picFont{
+    position: relative;
+    top: -300px;
+    right: 400px;
+    padding: 10px;
+    width: 350px;
+    text-align: left;
+    font-size: 25px;
+    color: white;
+    background-color: rgba(64, 138, 255, 0.51);
+}
+.gaishu{
+    margin-top: -3px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url("../img/Boeing/747-8l.jpg");
+    /*background-color: black;*/
+    background-attachment: fixed;
+    background-size: cover;
+    color: #1a1a1a;
+}
+.gaishu p{
+    margin-top: 10px;
+}
+.introduction>p{
+    font-size: 15px;
+}
+.gaishu h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+.midPic{
+    width: 100%;
+    margin-bottom: -57px;
+}
+.midPic video{
+    width: 100%;
+}
+#vF{
+    position: relative;
+    top: -100px;
+    left: 50px;
+    width: 300px;
+    color: #ffffff;
+    font-size: 40px;
+}
+.table{
+    width: 100%;
+    background-image: url("../img/Airbus/A380-family-stage.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: -10px;
+}
+.bottom{
+    margin-left: 60px;
+    margin-right: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.bottom p{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.bottom h2{
+    font-weight: lighter;
+    font-size: 40px;
+}
+.bottom a{
+    margin-left: 300px;
+}

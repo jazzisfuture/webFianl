@@ -1,0 +1,28 @@
+@charset "UTF-8";
+*{
+    background-image: url("../img/Airbus/a390.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+#table{
+    margin-top: 50px;
+}
+legend{
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-family: "微软雅黑 Light";
+}
+#table td{
+    padding: 20px;
+}
+#table table{
+    text-align: center;
+}
+input{
+    border: black 1px solid;
+    width: 300px;
+}
+
+#table{
+    padding-left: 500px;
+}

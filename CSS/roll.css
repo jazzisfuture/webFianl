@@ -1,0 +1,117 @@
+@charset "utf-8";
+* {
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+.slideBox {
+    margin: 50px auto;
+    width: 630px;
+    height: 350px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slideBox ul {
+    position: relative;
+    width: 2000px;
+}
+
+.slideBox ul li {
+    float: left;
+    position: relative;
+}
+
+.spanBox {
+    position: absolute;
+    width: 300px;
+    height: 20px;
+    bottom: 10px;
+    left: 80px;
+}
+
+.spanBox span {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    background-color: rgb(215, 215, 215);
+    float: left;
+    line-height: 16px;
+    text-align: center;
+    text-shadow: 2px 2px 2px #dddddd;
+    font-family: cabin-sketch;
+    font-size: 15px;
+}
+
+.slideBox .spanBox .active {
+    background-color: rgba(243, 243, 243, 0.79);
+    border-radius: 5px;
+}
+
+.prev {
+    position: absolute;
+    left: 0px;
+    top: 162px;
+    float: left;
+    opacity: 0.5;
+    font-size: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.next {
+    width: 15px;
+    height: 50px;
+    position: absolute;
+    right: 15px;
+    top: 162px;
+    float: right;
+    opacity: 0.5;
+    font-size: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.slideBox img{
+    width: 630px;
+    height: 350px;
+}
+#pic1 span{
+    position: absolute;
+    top: 500px;
+    right: 30px;
+    background-color: rgba(88, 190, 245, 0.5);
+    width:200px;
+    text-align: right;
+    font-size: 30px;
+    color: white;
+}
+#pic2 span{
+    position: absolute;
+    top: 500px;
+    right: 30px;
+    background-color: rgba(245, 143, 82, 0.5);
+    width:250px;
+    text-align: right;
+    color: white;
+    font-size: 25px;
+}
+#pic3 span{
+    position: absolute;
+    top: 500px;
+    right: 30px;
+    background-color: rgba(46, 19, 19, 0.5);
+    width:250px;
+    text-align: right;
+    color: white;
+    font-size: 27px;
+}

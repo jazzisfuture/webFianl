@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>波音747-8</title>
+    <script type="text/javascript" src="../JS/jquery.js"></script>
+    <script type="text/javascript" src="../JS/nav.js"></script>
+    <link type="text/css" rel="stylesheet" href="../CSS/nav.css">
+    <link type="text/css" rel="stylesheet" href="../CSS/747.css">
+    <link type="text/css" rel="stylesheet" href="../CSS/foot.css">
+    <script type="text/javascript" src="../JS/main.js"></script>
+    <script type="text/javascript">
+        $("document").ready(function () {
+            $("div.table").mousemove(function () {
+                $("div.bottom>p").stop().animate({fontSize:"22px"},100);
+                $("div.bottom>a").stop().animate({width:"900px",height:"780px"});
+            });
+            $("div.table").mouseleave(function () {
+                $("div.bottom>p").stop().animate({fontSize:"17px"},200);
+                $("div.bottom>a").stop().animate({width:"880px",height:"680px"});
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="nav">
+    <div id="navRight">
+        <a href="index.html"><img src="../img/logo/logo.png"></a>
+        <br>
+        <div id="userclick">
+            <a href="signin.html">登录</a>|
+            <a href="login.html">注册</a>
+        </div>
+    </div>
+    <div id="navleft">
+        <ul>
+            <li class="firstNav">民用航空器
+                <ul>
+                    <li><a href="Boeing777x.html" target="_blank">波音B777X</a></li>
+                    <li><a href="Boeing787.html" target="_blank">波音B787</a></li>
+                    <li><a href="Airbus350.html" target="_blank">空客A350</a></li>
+                    <li><a href="Airbus380.html" target="_blank">空客A380</a></li>
+                    <li><a href="http://www.boeing.cn/productsandservices/" target="_blank">更多</a></li>
+                </ul>
+            </li>
+            <li class="firstNav">航空器制造商
+                <ul>
+                    <li><a href="http://www.boeing.cn/" target="_blank"><img src="../img/Boeing/Boeing.png"></a></li>
+                    <li><a href="" target="_blank"><img src="../img/Airbus/Airbus.png"></a></li>
+                    <li><a href="#" target="_blank">更多</a></li>
+                </ul>
+            </li>
+            <li class="firstNav">航空公司
+                <ul>
+                    <li><a href="http://www.airchina.com.cn/" target="_blank"><img src="../img/AirChina/AirChina.gif"></a></li>
+                    <li><a href="http://www.csair.com/cn/index.shtml?WT.mc_id=sem-baidu-pbzc-title0718&WT.srch=1" target="_blank"><img src="../img/ChinaSouthern/ChinaSouthern.png"></a></li>
+                    <li><a href="https://www.lufthansa.com/cn/mi/Homepage?WT.srch=1&WT.mc_id=SEABRAND_lhcom_CN_mi" target="_blank"><img src="../img/Lufthansa/Lufthansa.jpg"></a></li>
+                    <li><a href="#">更多</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="neirong">
+    <div class="topPic">
+        <img src="../img/Boeing/747-8.jpg">
+        <div class="picFont">新一代空中女王</div>
+    </div>
+    <div class="introduction">
+        <div class="gaishu">
+            <h2>高客流带来高收益</h2>
+            <p>747-8的头等舱和商务舱可使航空公司向乘客提供一流的私密空中起居环境。所以747-8可在大客流航线上提供卓越的收入潜力。这款新型747共有400多个座位，创造了独特的商机，可最大限度地提高任何大客流航线的盈利潜力。为航空公司和乘客带来一流价值。让我们飞得更好。</p>
+        </div>
+    </div>
+    <div class="midPic">
+        <div>
+            <video autoplay="autoplay" loop="loop">
+                <source src="../img/Airbus/A380.mp4" type="video/mp4">
+            </video>
+            <div id="vF">A380设计亮点</div>
+        </div>
+    </div>
+    <div class="table">
+        <div class="bottom">
+            <h2>每一次飞行都能让您印象深刻</h2>
+            <p>没有任何飞机能与A380飞机相提并论，没有任何飞行体验能与A380相媲美。A380飞机是现代的标志，已经执飞超过40万架次商业航班，运输旅客超过1.6亿人次。如今A380平均每天执飞300多架次商业航班，相当于全球平均每2分钟就有一架A380飞机在起降。</p>
+            <p>A380飞机能为您带来最独特的飞行体验以及前所未有的舒适度体验，不论是头等舱，还是经济舱。作为全球最大型且最宽敞的商用客机，其客舱可以容纳最宽敞的座椅，为旅客创造舒适且放松的环境。宽敞的空间让旅客可以轻松的在客舱中走动，不论何种舱位级别，A380都是您的最佳选择。</p>
+        </div>
+        <div class="bottom">
+            <h2>A380，不只是一架飞机</h2>
+            <p>结合了最先进的航空技术以及卓越的客舱设计，A380飞机以卓越的品质成为了空中客车公司的骄傲。在创新、体验和效率方面都处于市场领跑者，A380飞机受到了旅客、飞行员和机组成员的广泛喜爱。</p>
+            <a href="http://www.airbus.com.cn/cn-aircraft-families/passengeraircraft/a380/"><img src="../img/Airbus/A380LINK.png"></a>
+        </div>
+    </div>
+    <div id="foot">
+        <div id="map">
+            <div class="mapList">
+                <ul id="aircraft"><span class="title">热门关注机型</span>
+                    <li><a href="Airbus350.html" target="_blank">空客A350</a></li>
+                    <li><a href="Boeing777x.html" target="_blank">波音B777X</a></li>
+                    <li><a href="Boeing787.html" target="_blank">波音B787</a></li>
+                    <li><a href="Airbus380.html" target="_blank">空客A380</a></li>
+                    <li><a href="#">查看全部</a></li>
+                </ul>
+            </div>
+            <div class="mapList">
+                <ul id="company"><span class="title">生产商</span>
+                    <li><a href="http://www.boeing.cn/" target="_blank"><img src="../img/Boeing/Boeing.png"></a></li>
+                    <li><a href="http://www.airbus.com.cn/homechina/" target="_blank"><img src="../img/Airbus/Airbus.png"></a></li>
+                    <li><a href="#">查看全部</a> </li>
+                </ul>
+            </div>
+            <div class="mapList"><span class="title">航空公司</span>
+                <ul id="airline">
+                    <li><a href="http://www.airchina.com.cn/" target="_blank">中国国际航空</a> </li>
+                    <li><a href="http://www.csair.com/cn/index.shtml?WT.mc_id=sem-baidu-pbzc-title0718&WT.srch=1" target="_blank">中国南方航空</a> </li>
+                    <li><a href="https://www.lufthansa.com/cn/mi/Homepage?WT.srch=1&WT.mc_id=SEABRAND_lhcom_CN_mi" target="_blank">汉莎航空</a></li>
+                    <li><a href="#">查看全部</a></li>
+                </ul>
+            </div>
+            <div class="mapList">
+                <ul id="unit"><span class="title">航空联盟</span>
+                    <li><a href="https://www.staralliance.com/zh/home" target="_blank">星空联盟</a></li>
+                    <li><a href="https://www.skyteam.com/zh" target="_blank">天合联盟</a></li>
+                    <li><a href="https://zh.oneworld.com/" target="_blank">寰宇一家</a></li>
+                    <li><a href="#">查看全部</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div id="cont">
+            <ul>
+                <li><span>联系我们</span></li>
+                <li>微博</li>
+                <li>微信</li>
+                <li><a href="mailto:jiangyulong1999@live.cn?subject=Hello%20again">电子邮箱</a></li>
+            </ul>
+        </div>
+        <div id="copyright">
+            <span>Copyright ©2018 蒋宇龙软件工程1706（8002117212） All Rights Reserved.</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
